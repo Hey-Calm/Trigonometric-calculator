@@ -14,7 +14,7 @@ def confirm():
            2: 'cos(余弦)',
            3: 'tan(正切)',
            4: 'arcsin(反正弦)',
-           5: 'arccos(反余弦)',
+           5: 'arctan(反正切)',
            }
     setting1 = dic.get(var.get())
     answer = tkinter.messagebox.askokcancel('Confirm/Cancel', 'Your choice is '+ setting1 +',''please select Confirm or Cancel.')
@@ -59,7 +59,7 @@ btn4 = Radiobutton(root, text='arcsin(反正弦)', bg="#ADD8E6", activebackgroun
                            value=4)
 btn4.place(relx=0.22, y=200, relheight=0.05, width=200)
 
-btn5 = Radiobutton(root, text='arccos(反余弦)', bg="#ADD8E6", activebackground='gray', variable=var,
+btn5 = Radiobutton(root, text='arctan(反正切)', bg="#ADD8E6", activebackground='gray', variable=var,
                            value=5)
 btn5.place(relx=0.22, y=240, relheight=0.05, width=200)
 
