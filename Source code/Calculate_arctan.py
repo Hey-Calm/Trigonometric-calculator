@@ -6,7 +6,7 @@
 
 import math
 def Calculate_arctan(x):
-    n=10
+    n=100000
     result_rad = 0
     sign = 1
     power = x
