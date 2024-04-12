@@ -18,7 +18,6 @@ def confirm():
                                             '请选择是否重新输入计算')
     if answer:
         root.destroy()
-        # import functionchoose1
         main.init_functionchoose()
 
 
@@ -46,8 +45,9 @@ def Show3():
 
     if choice1 == 1:
         if Function ==1:
-            sin_result_deg = Cal_sin_cos_degree.Calculate_sin(int(Angle))
-            sin = math.radians(int(Angle))
+            print(Angle)
+            sin_result_deg = Cal_sin_cos_degree.Calculate_sin(float(Angle))
+            sin = math.radians(float(Angle))
             sinReal = math.sin(sin)
             sin_difference = abs(sinReal - sin_result_deg)
             lb1 = Label(root, text='角度制：' + setting1 + '(' + Angle + ')' + ' = ' + str(sin_result_deg),
@@ -56,8 +56,8 @@ def Show3():
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
         if Function ==2:
-            cos_result_deg = Cal_sin_cos_degree.Calculate_cos(int(Angle))
-            cos = math.radians(int(Angle))
+            cos_result_deg = Cal_sin_cos_degree.Calculate_cos(float(Angle))
+            cos = math.radians(float(Angle))
             cosReal = math.cos(cos)
             cos_difference = abs(cosReal - cos_result_deg)
             lb1 = Label(root, text='角度制：' + setting1 + '(' + Angle + ')' + ' = ' + str(cos_result_deg),
@@ -66,8 +66,8 @@ def Show3():
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
         if Function ==3:
-            tan_result_deg = Cal_sin_cos_degree.Calculate_tan(int(Angle))
-            tan = math.radians(int(Angle))
+            tan_result_deg = Cal_sin_cos_degree.Calculate_tan(float(Angle))
+            tan = math.radians(float(Angle))
             tanReal = math.tan(tan)
             tan_difference = abs(tanReal - tan_result_deg)
             lb1 = Label(root, text='角度制：' + setting1 + '(' + Angle + ')' + ' = ' + str(tan_result_deg),
@@ -78,8 +78,8 @@ def Show3():
 
     if choice1 == 2:
         if Function ==1:
-            sin_result_rad = Cal_sin_cos_rad.Calculate_sin(int(Rad))
-            sinRadreal = math.sin(int(Rad))
+            sin_result_rad = Cal_sin_cos_rad.Calculate_sin(float(Rad))
+            sinRadreal = math.sin(float(Rad))
             sinRaddifference = abs(sin_result_rad - sinRadreal)
             lb1 = Label(root, text='弧度制：' + setting1 + '(' + Rad + ')' + ' = ' + str(sin_result_rad),
                         font=('微软雅黑', 10), bg='LightGrey')
@@ -87,8 +87,8 @@ def Show3():
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
         if Function ==2:
-            cos_result_Rad = Cal_sin_cos_rad.Calculate_cos(int(Rad))
-            cosRadreal = math.cos(int(Rad))
+            cos_result_Rad = Cal_sin_cos_rad.Calculate_cos(float(Rad))
+            cosRadreal = math.cos(float(Rad))
             cosRaddifference = abs(cos_result_Rad - cosRadreal)
             lb1 = Label(root, text='弧度制：' + setting1 + '(' + Rad + ')' + ' = ' + str(cos_result_Rad),
                         font=('微软雅黑', 10), bg='LightGrey')
@@ -96,8 +96,8 @@ def Show3():
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
         if Function ==3:
-            tan_result_Rad = Cal_sin_cos_rad.Calculate_tan(int(Rad))
-            tanRadreal = math.tan(int(Rad))
+            tan_result_Rad = Cal_sin_cos_rad.Calculate_tan(float(Rad))
+            tanRadreal = math.tan(float(Rad))
             tanRaddifference = abs(tan_result_Rad - tanRadreal)
             lb1 = Label(root, text='弧度制：' + setting1 + '(' + Rad + ')' + ' = ' + str(tan_result_Rad),
                         font=('微软雅黑', 10), bg='LightGrey')

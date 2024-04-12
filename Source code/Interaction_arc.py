@@ -44,9 +44,9 @@ def Show4():
     setting1 = dic.get(Function)
 
     if Function == 4:
-        arcsin_result = Arcsin_calc.Arcsin_calc(int(Num))
+        arcsin_result = Arcsin_calc.Arcsin_calc(float(Num))
         arcsin_result_Rad = arcsin_result[0]
-        arcsinReal = math.asin(int(Num))
+        arcsinReal = math.asin(float(Num))
         arcsinRealdeg = math.degrees(arcsinReal)
         arcsinDiff = abs(arcsinReal - arcsin_result_Rad)
         arcsin_result_deg = arcsin_result[1]
@@ -63,9 +63,9 @@ def Show4():
         lb4.place(relx=0, y=260, relheight=0.3, width=400)
 
     if Function ==5:
-        arctan_result = Calculate_arctan.Calculate_arctan(int(Num))
+        arctan_result = Calculate_arctan.Calculate_arctan(float(Num))
         arctan_result_Rad = arctan_result[0]
-        arctanReal = math.atan(int(Num))
+        arctanReal = math.atan(float(Num))
         arctanRealdeg = math.degrees(arctanReal)
         arctanDiff = abs(arctanReal - arctan_result_Rad)
         arctan_result_deg = arctan_result[1]
@@ -79,7 +79,7 @@ def Show4():
         lb1.place(relx=0, y=50, relheight=0.3, width=400)
         lb2.place(relx=0, y=120, relheight=0.3, width=400)
         lb3.place(relx=0, y=190, relheight=0.3, width=400)
-        lb4.place(relx=0, y=220, relheight=0.3, width=400)
+        lb4.place(relx=0, y=260, relheight=0.3, width=400)
 
     '''设置回退任务按钮'''
     performbtn = Button(root, text='确认', activebackground='gray',command = confirm)

@@ -18,3 +18,8 @@ def Calculate_arctan(x):
 
     result_deg = result_rad*180/math.pi    
     return result_rad,result_deg
+if __name__ == "__main__":
+    x = 0.9
+    result_rad,result_deg = Calculate_arctan(x)
+    print(result_rad,result_deg)
+

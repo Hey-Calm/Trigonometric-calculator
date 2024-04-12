@@ -19,6 +19,8 @@ def Arcsin_calc(data):
     rad = result
     deg = result*180/math.pi
     return rad,deg
+if __name__ == "__main__":
+    print(Arcsin_calc(0.78))
 
 
     

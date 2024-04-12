@@ -30,6 +30,7 @@ def choicejudge():
         angle = Entry(width=50)
         angle.place(relx=0.22, y=100, relheight=0.05, width=200)
         radian = Entry(state='disable')
+        print(radian)
         radian.place(relx=0.22, y=180, relheight=0.05, width=200)
     if choice == 2:
         angle = Entry(state='disable')
