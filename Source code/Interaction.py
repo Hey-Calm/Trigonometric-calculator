@@ -18,7 +18,7 @@ def confirm():
     if answer:
         root.destroy()
         # import functionchoose1
-        functionchoose.init_functionchoose()
+        main.init_functionchoose()
 
 
 def Show3():

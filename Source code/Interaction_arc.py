@@ -2,6 +2,7 @@ from tkinter import *
 import Calculate_arctan
 import Arcsin_calc
 import tkinter.messagebox
+import main
 
 
 '''将用户设置下发至交互模块'''
@@ -16,8 +17,7 @@ def confirm():
                                             '请选择是否重新输入计算')
     if answer:
         root.destroy()
-        import functionchoose1
-        functionchoose1.init_functionchoose()
+        main.init_functionchoose()
 
 
 def Show4():
