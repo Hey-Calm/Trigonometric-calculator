@@ -1,10 +1,7 @@
 from tkinter import *
-import Calculate_arctan
 import Cal_sin_cos_rad
 import Cal_sin_cos_degree
-import Arcsin_cal
 import tkinter.messagebox
-
 
 '''将用户设置下发至交互模块'''
 def BeginSimulation(set1, set2_1, set2_2, set2_3):
@@ -19,9 +16,8 @@ def confirm():
                                             '请选择是否重新输入计算')
     if answer:
         root.destroy()
-        import functionchoose
-        functionchoose.root.mainloop()
-
+        import functionchoose1
+        functionchoose1.init_functionchoose()
 
 
 def Show3():
@@ -68,22 +64,7 @@ def Show3():
             lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
-        if Function ==4:
-            arcsin_result = Arcsin_cal.Arcsin_calc(int(Angle))
-            arcsin_result_deg = arcsin_result[1]
-            lb1 = Label(root, text='角度制：' + setting1 + '(' + Angle + ')' + ' = ' + str(arcsin_result_deg),
-                        font=('微软雅黑', 10), bg='LightGrey')
-            lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
-            lb1.place(relx=0, y=50, relheight=0.3, width=400)
-            lb2.place(relx=0, y=120, relheight=0.3, width=400)
-        if Function ==5:
-            arctan_result = Calculate_arctan.Calculate_arctan(int(Angle))
-            arctan_result_deg = arctan_result[1]
-            lb1 = Label(root, text='角度制：' + setting1 + '(' + Angle + ')' + ' = ' + str(arctan_result_deg),
-                        font=('微软雅黑', 10), bg='LightGrey')
-            lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
-            lb1.place(relx=0, y=50, relheight=0.3, width=400)
-            lb2.place(relx=0, y=120, relheight=0.3, width=400)
+
     if choice1 == 2:
         if Function ==1:
             sin_result_rad = Cal_sin_cos_rad.Calculate_sin(int(Rad))
@@ -106,27 +87,8 @@ def Show3():
             lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
             lb1.place(relx=0, y=50, relheight=0.3, width=400)
             lb2.place(relx=0, y=120, relheight=0.3, width=400)
-        if Function ==4:
-            arcsin_result = Arcsin_cal.Arcsin_calc(int(Rad))
-            arcsin_result_Rad = arcsin_result[0]
-            lb1 = Label(root, text='弧度制：' + setting1 + '(' + Rad + ')' + ' = ' + str(arcsin_result_Rad),
-                        font=('微软雅黑', 10), bg='LightGrey')
-            lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
-            lb1.place(relx=0, y=50, relheight=0.3, width=400)
-            lb2.place(relx=0, y=120, relheight=0.3, width=400)
-        if Function ==5:
-            arctan_result = Calculate_arctan.Calculate_arctan(int(Rad))
-            arctan_result_Rad = arctan_result[0]
-            lb1 = Label(root, text='角度制：' + setting1 + '(' + Rad + ')' + ' = ' + str(arctan_result_Rad),
-                        font=('微软雅黑', 10), bg='LightGrey')
-            lb2 = Label(root, text='结果误差：', font=('微软雅黑', 10), bg='LightGrey')
-            lb1.place(relx=0, y=50, relheight=0.3, width=400)
-            lb2.place(relx=0, y=120, relheight=0.3, width=400)
 
     '''设置回退任务按钮'''
     performbtn = Button(root, text='确认', activebackground='gray',command = confirm)
     performbtn.place(relx=0.2, y=260, relheight=0.1, width=200)
     root.mainloop()
-
-#def resultshow1():
-#def resultshow2():
