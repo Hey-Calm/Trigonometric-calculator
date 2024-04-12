@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-import mathCal_
+import math
 
 ##输入参数为角度制
 

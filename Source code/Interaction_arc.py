@@ -1,6 +1,6 @@
 from tkinter import *
 import Calculate_arctan
-import Arcsin_cal
+import Arcsin_calc
 import tkinter.messagebox
 
 
@@ -43,7 +43,7 @@ def Show4():
     setting1 = dic.get(Function)
 
     if Function == 4:
-        arcsin_result = Arcsin_cal.Arcsin_calc(int(Num))
+        arcsin_result = Arcsin_calc.Arcsin_calc(int(Num))
         arcsin_result_Rad = arcsin_result[0]
         arcsin_result_deg = arcsin_result[1]
         lb1 = Label(root, text='弧度制：' + setting1 + '(' + Num + ')' + ' = ' + str(arcsin_result_Rad),
