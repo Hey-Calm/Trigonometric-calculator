@@ -13,6 +13,7 @@ def factorial(n):
 
 
 def Calculate_sin(x):
+    x=x%360
     x = float(x)
     angle = math.radians(x)
     result = 0;
@@ -23,6 +24,7 @@ def Calculate_sin(x):
 
 
 def Calculate_cos(x):
+    x=x%360
     angle = math.radians(x)
     result = 0;
     for i in range(10):
