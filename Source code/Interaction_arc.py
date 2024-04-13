@@ -1,5 +1,5 @@
 from tkinter import *
-import Calculate_arctan
+import Artan_calc
 import Arcsin_calc
 import tkinter.messagebox
 import math
@@ -63,16 +63,16 @@ def Show4():
         lb4.place(relx=0, y=260, relheight=0.3, width=400)
 
     if Function ==5:
-        arctan_result = Calculate_arctan.Calculate_arctan(float(Num))
+        arctan_result = Artan_calc.Calculate_arctan(float(Num))
         arctan_result_Rad = arctan_result[0]
         arctanReal = math.atan(float(Num))
         arctanRealdeg = math.degrees(arctanReal)
         arctanDiff = abs(arctanReal - arctan_result_Rad)
         arctan_result_deg = arctan_result[1]
         arctanDiffdeg = abs(arctanRealdeg - arctan_result_deg)
-        lb1 = Label(root, text='弧度制：' + setting1 + '(' + Num + ')' + ' = ' + str(arctan_result_deg),
+        lb1 = Label(root, text='弧度制：' + setting1 + '(' + Num + ')' + ' = ' + str(arctan_result_Rad),
                     font=('微软雅黑', 10), bg='LightGrey')
-        lb2 = Label(root, text='角度制：' + setting1 + '(' + Num + ')' + ' = ' + str(arctan_result_Rad),
+        lb2 = Label(root, text='角度制：' + setting1 + '(' + Num + ')' + ' = ' + str(arctan_result_deg),
                         font=('微软雅黑', 10), bg='LightGrey')
         lb3 = Label(root, text='弧度制结果误差：'+ str(arctanDiff), font=('微软雅黑', 10), bg='LightGrey')
         lb4 = Label(root, text='角度制结果误差：'+ str(arctanDiffdeg), font=('微软雅黑', 10), bg='LightGrey')
