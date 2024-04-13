@@ -6,21 +6,37 @@ import Interaction_arc
 '''第二个界面的数据信息'''
 def valueget():
     Interaction.BeginSimulation(setting1, var1_1.get(), angle.get(), radian.get())
-
 def valueget_arc():
     Interaction_arc.BeginSimulation_arc(setting1, inputnum.get())
+    
 def confirmcalculate():
-    answer = tkinter.messagebox.askokcancel('确认/取消',
-                                            '数据已经成功保存，请选择确认或者取消！')
-    if answer:
-        if setting1 == 1 or setting1 == 2 or setting1 == 3:
+    if  setting1 == 1 or setting1 == 2 or setting1 == 3:
+        answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确认或者取消！')
+        if answer:
             valueget()
             root.destroy()
             Interaction.Show3()
-        if setting1 == 4 or setting1 == 5:
+
+    if setting1 == 4 :
+        while float(inputnum.get()) > 1 or float(inputnum.get()) < -1:
+            tkinter.messagebox.showwarning('注意!', '计算值需在[-1,1]，请重新输入！')
+            break
+
+        while float(inputnum.get()) <= 1 and float(inputnum.get()) >= -1:
+            answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确认或者取消！')
+            if answer:
+                valueget_arc()
+                root.destroy()
+                Interaction_arc.Show4()
+            break
+
+    if setting1 == 5:
+        answer = tkinter.messagebox.askokcancel('确认/取消', '数据已经成功保存，请选择确认或者取消！')
+        if answer:
             valueget_arc()
             root.destroy()
             Interaction_arc.Show4()
+            
 def choicejudge():
     global angle
     global number
