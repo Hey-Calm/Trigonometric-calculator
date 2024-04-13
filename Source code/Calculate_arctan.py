@@ -6,17 +6,15 @@
 
 import math
 def Calculate_arctan(x):
-    n=100000
-    result_rad = 0
-    sign = 1
-    power = x
-    for i in range(1,n+1):
-        term = power/(2*i-1)
-        result_rad += sign *term
-        power *= x**2
-        sign *= -1
+    if  x<-1 or x >1:
+        return "您的输入值超过[-1,1]的界限，请重新输入"
+    result_rad=0
+    for i in range(1,100):
+        term = (-1)**(i+1)*x**(2*i-1)/(2*i-1)
+        result_rad += term
 
     result_deg = result_rad*180/math.pi    
+    
     return result_rad,result_deg
 if __name__ == "__main__":
     x = 0.9
