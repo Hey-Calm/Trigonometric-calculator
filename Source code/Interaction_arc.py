@@ -83,5 +83,5 @@ def Show4():
 
     '''设置回退任务按钮'''
     performbtn = Button(root, text='确认', activebackground='gray',command = confirm)
-    performbtn.place(relx=0.25, y=350, relheight=0.1, width=200)
+    performbtn.place(relx=0.25, y=380, relheight=0.04, width=200)
     root.mainloop()
