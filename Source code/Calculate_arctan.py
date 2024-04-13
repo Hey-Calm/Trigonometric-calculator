@@ -6,8 +6,7 @@
 
 import math
 def Calculate_arctan(x):
-    if  x<-1 or x >1:
-        return "您的输入值超过[-1,1]的界限，请重新输入"
+    
     result_rad=0
     for i in range(1,100):
         term = (-1)**(i+1)*x**(2*i-1)/(2*i-1)
