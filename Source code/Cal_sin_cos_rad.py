@@ -12,6 +12,7 @@ def factorial(n):
 
 
 def Calculate_sin(x):
+    x=x%(2*math.pi)
     result = 0;
     for i in range(10):
         term = (-1)**i*x**(2*i+1)/factorial(2*i+1)
@@ -20,6 +21,7 @@ def Calculate_sin(x):
 
 
 def Calculate_cos(x):
+    x=x%(2*math.pi)
     result = 0;
     for i in range(10):
         term = (-1)**i*x**(2*i)/factorial(2*i)
