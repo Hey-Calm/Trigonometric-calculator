@@ -7,7 +7,7 @@ def Arcsin_calc(data):
     if data == -1:
         return -1.5707963267,-90  
     if data <-1 or data >1:
-        return 99,99
+        return "您的输入值超过[-1,1]的界限，请重新输入"
     k = 999
     result = 0
     for i in range (1,k+1,2):
