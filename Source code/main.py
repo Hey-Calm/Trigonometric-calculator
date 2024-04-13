@@ -39,8 +39,8 @@ def init_functionchoose():
                5: 'arctan(反正切)',
                }
         setting1 = dic.get(var.get())
-        answer = tkinter.messagebox.askokcancel('Confirm/Cancel',
-                                                'Your choice is ' + setting1 + ',''please select Confirm or Cancel.')
+        answer = tkinter.messagebox.askokcancel('确定/取消',
+                                                '你的选择是 ' + setting1 + ',''请选择确定/取消.')
         if answer:
             if var.get() == 1 or var.get() == 2 or \
                     var.get() == 3 or var.get() == 4 or var.get() == 5:
