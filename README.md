@@ -10,5 +10,6 @@ and error detection in comparison with the official python math library.
 
 `Source code` 文件夹中存放了源代码文件，用于实现项目所需的功能模块
 
+`Trigonometric-calculator.exe` 文件为最后的可执行文件，用户可以根据需求选择三角函数进行计算
 
 
