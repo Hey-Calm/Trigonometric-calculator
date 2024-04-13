@@ -11,7 +11,7 @@ def valueget_arc():
     
 def confirmcalculate():
     if  setting1 == 1 or setting1 == 2 or setting1 == 3:
-        answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确认或者取消！')
+        answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确定或者取消！')
         if answer:
             valueget()
             root.destroy()
@@ -23,7 +23,7 @@ def confirmcalculate():
             break
 
         while float(inputnum.get()) <= 1 and float(inputnum.get()) >= -1:
-            answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确认或者取消！')
+            answer = tkinter.messagebox.askokcancel('确认/取消','数据已经成功保存，请选择确定或者取消！')
             if answer:
                 valueget_arc()
                 root.destroy()
@@ -31,7 +31,7 @@ def confirmcalculate():
             break
 
     if setting1 == 5:
-        answer = tkinter.messagebox.askokcancel('确认/取消', '数据已经成功保存，请选择确认或者取消！')
+        answer = tkinter.messagebox.askokcancel('确认/取消', '数据已经成功保存，请选择确定或者取消！')
         if answer:
             valueget_arc()
             root.destroy()
